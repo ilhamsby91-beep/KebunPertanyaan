@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jejak Sejarah Nusantara · Masa Penjajahan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img class="brand-mark" src="assets/ui/anchor.svg" alt=""><div><b>Jejak Sejarah Nusantara</b><small>Menjelajahi masa penjajahan</small></div></div>
+  <div class="top-stats"><span class="stat-value"><img src="assets/ui/coin.svg" alt=""><b id="coin-count">0</b></span><span class="stat-value"><img src="assets/ui/star.svg" alt=""><b id="star-count">0</b></span><button id="open-profile" class="profile-open" aria-label="Buka profil"><img id="profile-avatar" src="assets/profile-costumes/default.png" alt="Kostum profil"></button></div>
+</header>
+<main>
+<section id="screen-home" class="screen">
+  <div class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">MISI SEJARAH · MASA PENJAJAHAN</span>
+      <h1>Telusuri jejak,<br><em>pahami sejarah!</em></h1>
+      <p>Jelajahi suasana Nusantara pada masa penjajahan sambil menyelesaikan tantangan belajar. Setiap jawaban membantumu memahami perjalanan sejarah bangsa.</p>
+      <button class="btn primary" id="start-btn">Mulai bermain</button>
+    </div>
+    <div class="hero-art">
+      <div class="hero-art-image"><img src="assets/illustrations/hero-garden.svg" alt="Ilustrasi kebun Nusantara"></div><div class="hero-ground"></div>
+    </div>
+  </div>
+  <section class="levels-wrap">
+    <div class="section-title"><div><span class="eyebrow">LINIMASA PERJUANGAN</span><h2>Enam babak sejarah</h2></div><p>Babak berikutnya terbuka setelah babak sebelumnya selesai.</p></div>
+    <div id="level-list" class="level-list"></div>
+  </section>
+
+  <section class="how-card"><h2><img class="inline-art heading-art" src="assets/ui/book.svg" alt="">Cara bermain</h2><div class="how-grid">
+    <div><b>1</b><strong>Pilih bibit dan petak</strong><p>Pilih bibit, lalu klik satu petak kosong untuk mengisi satu baris berisi tujuh tanaman.</p></div>
+    <div><b>2</b><strong>Jawab soal</strong><p>Jawab soal untuk menyiram baris tanaman.</p></div>
+    <div><b>3</b><strong>Lihat tanaman tumbuh</strong><p>Tanaman tumbuh otomatis dan lebih cepat saat siang.</p></div>
+    <div><b>4</b><strong>Panen dan lanjut</strong><p>Rawat kebun selama dua hari untuk menuntaskan level.</p></div>
+  </div></section>
+</section>
+
+<section id="screen-game" class="screen" hidden>
+  <div id="scene" class="scene morning day-1">
+    <img class="scene-sky-icon" id="scene-sky-icon" src="assets/ui/sunrise.svg" alt=""><img class="scene-cloud cloud-one" src="assets/ui/cloud.svg" alt=""><img class="scene-cloud cloud-two" src="assets/ui/cloud.svg" alt=""><div class="scene-landscape"></div>
+    <div class="scene-heading"><span id="level-label">BABAK 1 · KELAS 4</span><h1 id="session-label">Hari 1 · Pagi</h1><p id="scene-tip">Menelusuri jejak masa penjajahan.</p></div>
+    <div class="scene-hills"></div>
+  </div>
+  <div class="game-toolbar">
+    <div class="day-clock"><b class="timer-value"><img src="assets/ui/clock.svg" alt=""><span id="day-timer-value">05:00</span></b><div class="day-progress"><i id="day-progress"></i></div></div>
+    <div class="level-progress-box"><small>PROGRES LEVEL</small><b id="progress-label">0 / 5 panen</b><div class="progress"><i id="level-progress"></i></div></div>
+    <div class="daily-target" aria-label="Misi harian">
+      <div class="daily-heading"><div><small>MISI HARIAN</small><b id="daily-date-label">Target hari ini</b></div><span id="daily-completed-count">0/3 selesai</span></div>
+      <div id="daily-missions" class="daily-missions"></div>
+    </div>
+    <div class="toolbar-right"><span class="stat-value"><img src="assets/ui/coin.svg" alt=""><b id="game-coins">0</b></span><button id="home-btn" class="btn light small">Keluar</button></div>
+  </div>
+  <section class="seed-shop game-seed-picker">
+    <div class="section-title">
+      <div><span class="eyebrow">PERSIAPAN KEBUN</span><h2>Pilih bibit yang ingin ditanam</h2></div>
+      <p>Semua jenis tanaman tersedia sejak awal. Pilih bibit, lalu klik salah satu petak kosong untuk menanami satu baris.</p>
+    </div>
+    <div class="seed-shop-info">
+      <span><img class="inline-art" src="assets/ui/coin.svg" alt=""> Koin tersedia: <b id="shop-coins">0</b></span>
+      <span><img class="inline-art" src="assets/ui/seedling.png" alt=""> Bibit siap ditanam: <b id="selected-seed-name">Padi · klik petak kosong</b></span>
+    </div>
+    <div id="seed-list" class="seed-list"></div>
+  </section>
+  <div id="weather-notice" class="weather-notice" hidden></div>
+  <section class="garden-card">
+    <div class="garden-heading"><div><span class="eyebrow">KEBUNMU</span><h2>Barisan tanaman</h2></div><span class="helper"><img class="inline-art" src="assets/ui/seedling.png" alt=""> Klik satu petak kosong untuk mengisi satu baris (7 tanaman)</span></div>
+    <div id="rows" class="rows"></div>
+    <div class="garden-legend"><span>Petak kosong</span><span><img src="assets/ui/seedling.png" alt=""> Bibit</span><span><img src="assets/ui/leaf.svg" alt=""> Tumbuh</span><span><img src="assets/ui/flower.svg" alt=""> Siap panen</span><span><img src="assets/ui/water-drop.svg" alt=""> Butuh disiram</span></div>
+  </section>
+  <div class="session-footer"><div><b id="session-progress">5 baris kosong</b><p>Tanaman tumbuh sesuai durasinya. Siram setiap 30 detik jika diminta, atau panen langsung saat siap.</p><small class="inventory-line"><img src="assets/ui/fertilizer.svg" alt=""> Pupuk biasa: <b id="fertilizer-count">0</b> · <img src="assets/ui/fertilizer-premium.svg" alt=""> Pupuk premium: <b id="premium-fertilizer-count">0</b> · <img src="assets/ui/watering-can.svg" alt=""> Penyiram otomatis: <b id="auto-water-count">0</b></small></div></div>
+  <section class="garden-card fertilizer-tools">
+    <div class="garden-heading"><div><span class="eyebrow">TOKO PERLENGKAPAN</span><h2>Item kebun</h2></div><span class="helper">Gunakan item pada baris yang ditanami</span></div>
+    <div class="garden-items">
+      <article class="garden-item"><div class="garden-item-icon"><img src="assets/ui/fertilizer.svg" alt=""></div><b>Pupuk biasa</b><p>Menambah progres tumbuh 25% pada satu baris.</p><small>Stok: <b id="fertilizer-shop-count">0</b></small><button id="buy-fertilizer" class="btn primary small">Beli · 8 koin</button></article>
+      <article class="garden-item"><div class="garden-item-icon"><img src="assets/ui/fertilizer-premium.svg" alt=""></div><b>Pupuk premium</b><p>Menambah progres tumbuh 50% pada satu baris.</p><small>Stok: <b id="premium-fertilizer-shop-count">0</b></small><button id="buy-premium-fertilizer" class="btn primary small">Beli · 15 koin</button></article>
+      <article class="garden-item"><div class="garden-item-icon"><img src="assets/ui/watering-can.svg" alt=""></div><b>Penyiram otomatis</b><p>Menyiram satu baris sekali tanpa menjawab soal.</p><small>Stok: <b id="auto-water-shop-count">0</b></small><button id="buy-auto-water" class="btn primary small">Beli · 15 koin</button></article>
+    </div>
+  </section>
+</section>
+</main>
+
+<div id="question-modal" class="modal" hidden>
+ <div class="modal-card">
+  <button class="modal-close" id="close-question" aria-label="Tutup">Tutup</button>
+  <span class="eyebrow" id="question-subject">MATEMATIKA</span>
+  <h2 id="question-title">Ayo bantu tanaman tumbuh!</h2>
+  <p id="question-text"></p>
+  <div id="answer-list" class="answer-list"></div>
+  <div id="answer-feedback" class="feedback" aria-live="polite"></div>
+  <button id="question-continue" class="btn primary full" hidden>Lanjutkan</button>
+ </div>
+</div>
+<div id="level-modal" class="modal" hidden>
+ <div class="modal-card level-result">
+  <div class="result-illustration"><img id="result-image" src="assets/ui/trophy.svg" alt=""></div><span class="eyebrow">LEVEL SELESAI</span>
+  <h2 id="result-title">Kebun hebat!</h2><p id="result-text"></p>
+  <div class="result-rewards" id="result-rewards"></div>
+  <button id="result-button" class="btn primary full">Lanjutkan</button>
+ </div>
+</div>
+<div id="profile-modal" class="modal" hidden><div class="modal-card profile-modal-card"><button class="modal-close" id="close-profile" aria-label="Tutup">Tutup</button><span class="eyebrow">PROFIL KEBUN</span><h2>Kostum profil</h2><div class="profile-summary"><img id="profile-modal-avatar" src="assets/profile-costumes/default.png" alt="Kostum profil"><div><b>Poin tersedia: <span id="profile-points">0</span></b><small>Kumpulkan poin dari jawaban benar untuk membeli kostum.</small></div></div><div id="costume-list" class="costume-list"></div><p class="costume-note">Ganti gambar kostum di folder <b>assets/profile-costumes/</b>. Nama file: default.png, kostum-1.png, kostum-2.png, kostum-3.png.</p></div></div>
+<script src="js/questions.js"></script>
+<script src="questions/kelas-4/matematika.js"></script>
+<script src="questions/kelas-4/bahasa-inggris.js"></script>
+<script src="questions/kelas-4/ips.js"></script>
+<script src="questions/kelas-4/ipa.js"></script>
+<script src="questions/kelas-4/bahasa-indonesia.js"></script>
+<script src="questions/kelas-5/matematika.js"></script>
+<script src="questions/kelas-5/bahasa-inggris.js"></script>
+<script src="questions/kelas-5/ips.js"></script>
+<script src="questions/kelas-5/ipa.js"></script>
+<script src="questions/kelas-5/bahasa-indonesia.js"></script>
+<script src="questions/kelas-6/matematika.js"></script>
+<script src="questions/kelas-6/bahasa-inggris.js"></script>
+<script src="questions/kelas-6/ips.js"></script>
+<script src="questions/kelas-6/ipa.js"></script>
+<script src="questions/kelas-6/bahasa-indonesia.js"></script>
+<script src="js/game.js"></script>
+</body></html>
