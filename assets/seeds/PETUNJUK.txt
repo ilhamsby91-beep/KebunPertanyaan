@@ -1,0 +1,1 @@
+Gambar bibit PNG per jenis tanaman. Nama file mengikuti ID tanaman: padi.png, pisang.png, jagung.png, wortel.png, stroberi.png, anggur.png, dan durian.png.

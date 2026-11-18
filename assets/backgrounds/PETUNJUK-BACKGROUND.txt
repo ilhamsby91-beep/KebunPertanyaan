@@ -1,0 +1,1 @@
+Background permainan dipanggil dari css/style.css. Gunakan nama morning.svg, noon.svg, afternoon.svg, dan night.svg agar otomatis tampil mengikuti sesi.

@@ -1,0 +1,8 @@
+BACKGROUND WAKTU PERMAINAN
+File SVG yang sedang dipakai game:
+- morning.svg = suasana pagi
+- noon.svg = suasana siang
+- afternoon.svg = suasana sore
+- night.svg = suasana malam
+
+Untuk mengganti gambar, simpan file dengan nama yang sama dan pertahankan format SVG.

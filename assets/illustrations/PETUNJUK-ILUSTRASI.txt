@@ -1,0 +1,5 @@
+Ilustrasi halaman utama:
+- hero-garden.svg = gambar utama di sisi kanan banner.
+- hero-background.svg = aset latar tambahan (saat ini tidak dipakai sebagai lapisan terpisah).
+
+Pertahankan nama file agar gambar tetap tampil.

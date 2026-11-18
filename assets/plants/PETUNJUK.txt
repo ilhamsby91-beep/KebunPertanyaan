@@ -1,0 +1,1 @@
+Ilustrasi tanaman ada di tiap folder tanaman. art.png adalah gambar utama; stage-1.png sampai stage-3.png dan harvest.png digunakan pada tahapan pertumbuhan.

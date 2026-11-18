@@ -1,0 +1,6 @@
+Letakkan gambar tanaman anggur PNG transparan di folder ini:
+stage-1.png = bibit
+stage-2.png = tumbuh
+stage-3.png = dewasa
+harvest.png = siap panen
+Jika gambar belum ada, game memakai emoji sebagai cadangan.

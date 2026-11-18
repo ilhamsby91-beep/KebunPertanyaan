@@ -1,0 +1,1 @@
+Ganti gambar kostum profil dengan PNG berukuran persegi (disarankan 512x512), gunakan nama default.png, kostum-1.png, kostum-2.png, atau kostum-3.png. Jangan menghapus nama file yang sedang dipakai kode.

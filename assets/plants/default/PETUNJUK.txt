@@ -1,0 +1,1 @@
+Letakkan stage-1.png, stage-2.png, stage-3.png, dan harvest.png di folder ini. Lihat README.md.

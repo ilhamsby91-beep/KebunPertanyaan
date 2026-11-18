@@ -1,0 +1,1 @@
+Ilustrasi antarmuka berbentuk SVG. File ini dipanggil langsung dari HTML dan JavaScript.
